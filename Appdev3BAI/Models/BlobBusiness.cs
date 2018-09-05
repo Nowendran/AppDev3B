@@ -113,7 +113,7 @@ namespace Appdev3BAI.Models
             string contentString = "";
             try
             {
-                const string subscriptionKey = ;
+                const string subscriptionKey = "b5a75ee83d4e4b03abdf5e9c12b45e48";
                 const string uriBase = "https://westeurope.api.cognitive.microsoft.com/vision/v2.0/analyze";
                 HttpClient client = new HttpClient();
 
