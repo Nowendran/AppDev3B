@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Appdev3BAI.Models.ViewModelBlobs>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <a href="@Href("~/Blobs/UploadView")">Upload Image</a>
+</div>
+<table class="table">
+    @*<tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.URI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.details)
+        </th>
+        <th></th>
+    </tr>*@
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.URI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.details)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+        <td><a href="@item.URI" target="_blank">@item.Name</a><br /></td>
+
+        <td> @Html.ActionLink("Delete", "Delete", new { id = item.Name })</td>
+        <td> @Html.ActionLink("Details", "Details", new { id = item.Name })</td>
+    </tr>
+}
+
+</table>

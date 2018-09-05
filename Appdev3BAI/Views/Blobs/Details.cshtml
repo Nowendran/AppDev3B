@@ -1,0 +1,75 @@
+﻿@model Appdev3BAI.Models.ViewModelBlobs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<head>
+    <style>
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            border-radius: 5px;
+        }
+
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            }
+
+        img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        </
+    </style>
+
+</head>
+<div>
+    <h4>ViewModelBlobs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>*@
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.URI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.URI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.details)
+        </dt>*@
+
+       
+        <div class="card">
+            <img src="@Model.URI" alt="Avatar" style="width:100%"/>
+            <div class="container">
+                <h4><b>@Model.Name</b></h4>
+                <p>@Model.details</p>
+            </div>
+        </div>
+        @*<dd>
+            @Html.DisplayFor(model => model.details)
+        </dd>*@
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
